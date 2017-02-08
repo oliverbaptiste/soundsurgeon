@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Soundsurgeon / HTML5 beta</title>
+	<link rel="icon" type="image/ico" href="favicon.ico" />
+	<style type="text/css" media="screen">@import "css/HTML5.css";</style>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		function draw() {
+			var canvas = document.getElementById("navigation");
+			var ctx = canvas.getContext("2d");
+			
+			ctx.fillStyle = "rgb(200,0,0)";
+			ctx.fillRect (10, 10, 55, 50);
+			
+			ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+			ctx.fillRect (30, 30, 55, 50);
+		}		
+	</script>
+</head>
+<body onload="draw()">
+<!-- WARNING FOR IE USERS -->
+<canvas id="IEWarning">
+	<p id="warning"><strong>IE users:</strong> This HTML5 document will not render correctly in your browser.<br/>Please use <strong>Firefox</strong>, <strong>Safari</strong> or <strong>Opera</strong>; or switch the <strong><a href="/">XHTML 1.0</a></strong> version.</p>
+</canvas>
+<!-- HEADER -->
+	<header>
+		<h1>Soundsurgeon <span id="beta">/ HTML5 beta</span></h1>
+		<h2>Bass guitar, music production &amp; sound art by Oliver Baptiste.</h2>
+	</header>
+<!-- NAVIGATION -->
+	<nav>
+		<canvas id="navigation" width="166" height="166"><img src="images/surgeon_blue_166.jpg"  alt="Soundsurgeon in the Zone &#169; 2000" width="166" height="166" /></canvas>
+		<ul>
+			<li><strong>Welcome! /</strong></li>
+			<li><a href="mp3/">Free MP3s /</a></li>
+		</ul>
+	</nav>
+<!-- CONTENT -->
+	<div class="content">
+		<h3>From the Desk of Dr. Alphaeus:</h3>
+		<p>After eons of research in the field of Electroacoustic Macrobiotics at the University of Aquarius, Dr. Alphaeus the Soundsurgeon established this website to communicate with his patients: the good citizens of Planet Earth (Sol System, Milky Way Galaxy). His preferred surgical instrument is the <em>electric bass guitar</em>.</p>
+		<hr />
+		<p><a href="mp3/" title="Free MP3s">Music from the Soundsurgeon archive</a> is available for download.</p>
+		<p>Peace,<br />
+		Soundsurgeon</p>
+	</div>
+<!-- FOOTER -->
+	<footer>
+		<p class="copyright">Copyright &#169; 1999&#8211;2010 <a href="http://oliverbaptiste.com/" target="_blank">Oliver G. A. Baptiste</a>.</p>
+		<p class="trademark">&#8220;Soundsurgeon&#8221; and &#8220;Doctor Alphaeus&#8221; are trademarks, service marks &amp; pseudonyms of Oliver G. A. Baptiste (<abbr title="The American Society of Composers, Authors and Publishers">ASCAP</abbr>).</p>
+		<p class="datestamp"><a href="http://validator.w3.org/check/referer" title="Validate HTML5">HTML5</a> + <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validate CSS">CSS 2.1</a></p>
+		<p class="datestamp">back to <a href="/">XHTML</a> version</p>
+	</footer>
+</body>
+</html>

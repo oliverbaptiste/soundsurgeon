@@ -1,0 +1,155 @@
+body {
+    background-color: #E3FDFC;
+	font-family: Georgia;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0;
+}
+
+
+/* LINK STYLES */
+a {
+	color: #34A198;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover {
+	background-color: yellow;
+	text-decoration: underline;
+}
+
+/* IE WARNING */
+canvas#IEWarning {
+	display: none;
+}
+#warning {
+	width: 685px;
+	background-color: yellow;
+	border: 1px;
+	margin: 5px 0 0 15px;	
+}
+
+/* HEADERS */
+h1 {
+	margin: 15px 0 0 15px;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+}
+h1 span#beta {
+	color:#666;
+	font-size:14px;
+}
+h1 a { color: black; }
+h2 {
+	margin: 5px 0 15px 15px;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 0.15em;
+}
+h3 {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0px;
+	margin-top: 15px;
+	margin-bottom: 0;
+	line-height: 80%
+}
+
+/* NAVIGATION */
+canvas#navigation {
+	background-color: white;
+	border-bottom: 1px solid #CCC;
+}
+nav {
+	margin-left: 11px;
+	float: left;
+	width: 166px;
+	background: #EFEFEF;
+	border: 1px solid #CCC;
+}
+nav img {
+	border-bottom: 1px solid #CCC;
+
+}
+
+nav ul {
+	margin: 10px;
+	padding: 0;
+}
+
+nav li {
+	list-style: none;
+	margin-top: 0.5em;
+	text-align: right;
+}
+
+/* CONTENT */
+.content {
+	border: 1px solid #CCC;
+	margin-top: 0px;
+	margin-left: 185px;
+	width: 500px;
+	background-color: white;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	letter-spacing: 0.1em;
+}
+.content p {
+	line-height: 150%;
+	margin: 1em;
+}
+.content ul {
+	list-style: none; 
+	margin: 0;
+	padding: 0;
+}
+.content li {
+	margin: 0;
+}
+
+footer {
+	clear: both;
+	color: #666;
+	font-family: Georgia, Courier, serif;
+	letter-spacing: 0em;
+	/* 
+	margin-top: 0px;
+	margin-left: 185px;
+	*/
+	/*
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 0;
+	*/
+}
+
+footer p { 
+	width: 870px;
+	font-size: 9px;
+	margin-left: 15px;
+	text-align: center;
+}
+
+p.copyright {
+	font-weight: bold;
+	margin-top: 9px;
+	margin-bottom: 4px;
+}
+
+p.trademark {
+	margin-top: 0;
+	margin-bottom: 4px;
+}
+
+p.datestamp {
+	margin-top: 4px;
+	margin-bottom: 0;
+}
+
+hr {
+	display: none;
+}

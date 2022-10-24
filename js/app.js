@@ -96,7 +96,7 @@ $(document).ready(function(){
       $('.filter-envelope .release').val(synth.filterEnvelope.release);
     },
     init: function() {
-      App.synthObj = new Tone.MonoSynth().toMaster();
+      App.synthObj = new Tone.MonoSynth().toDestination();
       App.currentScale = App.generateScale('c2', CONSTANTS.MODES[0]);
       Tone.Master.volume.value = -6;
       App.initControls(App.synthObj);

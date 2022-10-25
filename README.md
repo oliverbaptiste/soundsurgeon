@@ -4,7 +4,7 @@ My final project web app is a synthesizer using the [**Web Audio API**](https://
 
 Libraries Used:
 
-* [jQuery 3.1.1](https://jquery.com/) for UI event handling
+* [jQuery 3.6.1](https://jquery.com/) for UI event handling
 * [KeyboardJS](https://github.com/RobertWHurst/KeyboardJS) for advanced keyboard event handling
 * [Tone.js](https://tonejs.github.io/) for sound generation
 * [Teoria.js](https://github.com/saebekassebil/teoria) for musical scale generation

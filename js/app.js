@@ -35,13 +35,13 @@ $(document).ready(function(){
       });
       $('.mute').change(function(e) {
         if ( $(this).is(':checked') ) {
-          Tone.Master.mute = true;
+          Tone.Destination.mute = true;
         } else {
-          Tone.Master.mute = false;
+          Tone.Destination.mute = false;
         }
       });
       $('.volume').change(function(e) {
-        Tone.Master.volume.value = $(this).val();
+        Tone.Destination.volume.value = $(this).val();
       });
       $('.waveforms input').change(function(e) {
         var waveform = $(this).val();
@@ -98,7 +98,7 @@ $(document).ready(function(){
     init: function() {
       App.synthObj = new Tone.MonoSynth().toDestination();
       App.currentScale = App.generateScale('c2', CONSTANTS.MODES[0]);
-      Tone.Master.volume.value = -6;
+      Tone.Destination.volume.value = -6;
       App.initControls(App.synthObj);
       App.bindEvents(App.synthObj);
     }

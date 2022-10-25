@@ -192,11 +192,11 @@ generateScale: function(tonic, scaleType) {
 ```
 
 There are many different directions this app could go:
-* generate UI via JS
-* add effects and polyphony
-* allow the saving and recall of patches
-* adding a chord arpeggiator or sequencer
-* add Web MIDI API support so the synth could be played with a MIDI keyboard
+* [x] generate UI via JS
+* [ ] add effects and polyphony
+* [ ] allow the saving and recall of patches
+* [ ] adding a chord arpeggiator or sequencer
+* [ ] add Web MIDI API support so the synth could be played with a MIDI keyboard
 
 ---
-*Last updated: 2022-10-25 00:20 UTC*
+*Last updated: 2022-10-25 03:15 UTC*

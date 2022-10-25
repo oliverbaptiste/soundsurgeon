@@ -1,7 +1,3 @@
-import * as Tone from 'tone';
-import teoria from 'teoria';
-import * as keyboardJS from 'keyboardjs';
-
 $(function(){
   const CONSTANTS = {
     HOME_ROW: [ 'a', 's', 'd', 'f', 'j', 'k', 'l', 'semicolon' ],

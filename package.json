@@ -3,11 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "dependencies": {
-    "keyboardjs": "^2.7.0",
-    "teoria": "^2.5.0",
-    "tone": "^14.7.77"
-  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

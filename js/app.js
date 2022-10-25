@@ -1,4 +1,3 @@
-import $ from "jquery";
 import * as Tone from 'tone';
 import teoria from 'teoria';
 import * as keyboardJS from 'keyboardjs';

@@ -1,3 +1,11 @@
+import 'normalize.css';
+import './style.scss';
+
+import $ from 'jquery';
+import * as Tone from 'tone';
+import teoria from 'teoria';
+import keyboardJS from 'keyboardjs';
+
 $(function(){
   const CONSTANTS = {
     HOME_ROW: [ 'a', 's', 'd', 'f', 'j', 'k', 'l', 'semicolon' ],

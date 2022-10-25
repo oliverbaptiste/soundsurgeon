@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
+    "jquery": "^3.6.1",
+    "keyboardjs": "^2.7.0",
+    "teoria": "^2.5.0",
     "tone": "^14.7.77"
   },
   "scripts": {

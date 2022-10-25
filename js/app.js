@@ -1,4 +1,9 @@
-$(document).ready(function(){
+import $ from "jquery";
+import * as Tone from 'tone';
+import teoria from 'teoria';
+import * as keyboardJS from 'keyboardjs';
+
+$(function(){
   const CONSTANTS = {
     HOME_ROW: [ 'a', 's', 'd', 'f', 'j', 'k', 'l', 'semicolon' ],
     DEFAULT_SCALE: [ 'C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5' ],

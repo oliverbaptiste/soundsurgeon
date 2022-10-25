@@ -14,5 +14,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/oliverbaptiste/soundsurgeon.git"
+  },
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "tone": "^14.7.77"
   }
 }

@@ -15,7 +15,7 @@ The instrument utilizes the Web Audio API's ability to generate sound in the bro
 
 In the Web Audio API, an `AudioContext` object is an audio processing interface that consists of audio modules connected to each other, like in a modular synthesizer. These modules — called *nodes* — are created with constructor methods, while other `AudioContext` methods connect and manipulate the nodes.
 
-```
+```javascript
 // create AudioContext
 var a = new AudioContext();
 
@@ -46,11 +46,11 @@ o.start(0);
 
 Tone.js is a framework that abstracts the Web Audio API `AudioContext` and nodes into the `Tone` object, which contain object types like `Instrument` and  `Effect` that are easier to work with in a musical context. For instance, you can choose notes using scientific pitch notation to choose frequencies, or define note duration like you would on a score:
 
-```
+```javascript
 // Tone.js "Hello World"
 
-// create a synth and connect it to the master output (your speakers)
-var synth = new Tone.Synth().toMaster();
+// create a synth and connect it to the destination (your speakers)
+var synth = new Tone.Synth().toDestination();
 
 //play a middle 'C' for the duration of an 8th note
 synth.triggerAttackRelease("C4", "8n");
@@ -61,7 +61,7 @@ In `App.init`, `App.synthObj` is assigned an instance of the `Tone.MonoSynth` in
 * one oscillator
 * connected to an amplitude envelope
 * connected to a filter that is controlled by its own envelope
-* connected to the `Tone.Master` output object.
+* connected to the `Tone.Destination` output object.
 
 The [Tone.js API](https://tonejs.github.io/docs/) describes the various methods and parameters available to `Tone` components. The major `Tone.MonoSynth` sound parameters are:
 
@@ -93,7 +93,7 @@ The [Tone.js API](https://tonejs.github.io/docs/) describes the various methods 
 
 The `App.initControls` method invoked in `App.init` accepts a Tone.js synth object as an argument, gets the synth's sound parameters, and adjusts the UI to represent those values using jQuery methods:
 
-```
+```javascript
 initControls: function(synth) {
   var initWaveform = 'input[value="' + synth.oscillator.type + '"]';
   $(initWaveform).attr('checked', 'checked');
@@ -111,18 +111,18 @@ initControls: function(synth) {
 }
 ```
 
-
 The `App.bindEvents` method invoked in `App.init` also accepts a Tone.js synth object as an argument, and contains the code that handles the event listeners when UI elements change:
-```
+
+```javascript
 $('.mute').change(function(e) {
   if ( $(this).is(':checked') ) {
-    Tone.Master.mute = true;
+    Tone.Destination.mute = true;
   } else {
-    Tone.Master.mute = false;
+    Tone.Destination.mute = false;
   }
 });
 $('.volume').change(function(e) {
-  Tone.Master.volume.value = $(this).val();
+  Tone.Destination.volume.value = $(this).val();
 });
 $('.waveforms input').change(function(e) {
   var waveform = $(this).val();
@@ -152,7 +152,7 @@ $('.filter-envelope input').change(function(e) {
 ```
 `App.bindEvents` also utilizes KeyboardJS, a key bindings library that most importantly allows the `.preventRepeat()` method to disable key repeat when keys are held down. The names of the home row keys are held in a variable in the `CONSTANTS` object, and Tone.js triggers are attached to both the key bindings and the `<label>` elements that hold the `<button>` UI elements.
 
-```
+```javascript
 CONSTANTS.HOME_ROW.forEach(function(elem, i) {
   keyboardJS.bind(elem, function(e) {
     e.preventRepeat();
@@ -177,7 +177,7 @@ document.querySelectorAll('.keyboard label').forEach(function(elem, i) {
 
 Teoria.js is a library that allows for programming in a Western music theory context. Earlier in development, the `CONSTANTS.DEFAULT_SCALE` array supplied the app with the notes needed by the `Tone` object to create a full scale. Teoria.js allows for scales, notes, and intervals to be represented by objects, and objects can be chained together like in jQuery. The `App.generateScale` method now returns an array that is used to create the notes, so that in the future, users could choose the tonic note, octave, and scale type they want the keyboard to control.
 
-```
+```javascript
 generateScale: function(tonic, scaleType) {
   var tonicObj = teoria.note(tonic);
   var scaleObj = tonicObj.scale(scaleType);
@@ -199,4 +199,4 @@ There are many different directions this app could go:
 * add Web MIDI API support so the synth could be played with a MIDI keyboard
 
 ---
-*Last updated: 2020-05-10 07:14 UTC*
+*Last updated: 2022-10-25 00:20 UTC*

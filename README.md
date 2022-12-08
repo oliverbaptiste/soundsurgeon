@@ -197,6 +197,7 @@ generateScale: function(tonic, scaleType) {
 There are many different directions this app could go:
 
 * [x] generate UI via JS
+  * [ ] generate UI using a library/framework like Vue or React
 * [ ] add effects and polyphony
 * [ ] allow the saving and recall of patches
 * [ ] adding a chord arpeggiator or sequencer
@@ -204,4 +205,4 @@ There are many different directions this app could go:
 
 ---
 
-Last updated: 2022-12-07 03:55 UTC
+Last updated: 2022-12-08 04:04 UTC

@@ -52,12 +52,13 @@ Tone.js is a framework that abstracts the Web Audio API `AudioContext` and nodes
 // create a synth and connect it to the destination (your speakers)
 var synth = new Tone.Synth().toDestination();
 
-//play a middle 'C' for the duration of an 8th note
+// play a middle 'C' for the duration of an 8th note
 synth.triggerAttackRelease("C4", "8n");
 
 ```
 
 In `App.init`, `App.synthObj` is assigned an instance of the `Tone.MonoSynth` instrument, a monophonic synthesizer composed of:
+
 * one oscillator
 * connected to an amplitude envelope
 * connected to a filter that is controlled by its own envelope
@@ -86,7 +87,8 @@ The [Tone.js API](https://tonejs.github.io/docs/) describes the various methods 
     * Sustain
     * Release
 
-`index.html` contains an HTML5 user interface of `<input>` element to control these parameters.
+The user interface used to live in `index.html`, but is now generated via a template string in `App.view`. HTML5 `<input>` elements are utilized to control these parameters:
+
 * `checkbox` for the mute button
 * `radio` for waveform selection
 * `range` sliders for all other parameters
@@ -150,6 +152,7 @@ $('.filter-envelope input').change(function(e) {
   currentEnv[controlName] = controlValue;
 });
 ```
+
 `App.bindEvents` also utilizes KeyboardJS, a key bindings library that most importantly allows the `.preventRepeat()` method to disable key repeat when keys are held down. The names of the home row keys are held in a variable in the `CONSTANTS` object, and Tone.js triggers are attached to both the key bindings and the `<label>` elements that hold the `<button>` UI elements.
 
 ```javascript
@@ -192,6 +195,7 @@ generateScale: function(tonic, scaleType) {
 ```
 
 There are many different directions this app could go:
+
 * [x] generate UI via JS
 * [ ] add effects and polyphony
 * [ ] allow the saving and recall of patches
@@ -199,4 +203,5 @@ There are many different directions this app could go:
 * [ ] add Web MIDI API support so the synth could be played with a MIDI keyboard
 
 ---
-*Last updated: 2022-10-25 03:15 UTC*
+
+Last updated: 2022-12-07 03:55 UTC

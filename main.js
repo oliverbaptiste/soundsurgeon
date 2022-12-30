@@ -275,7 +275,7 @@ $(function(){
             </label>
           </div>
         </div>
-      </div>      
+      </div>
       `;
       $('.device').html( () => {
         return template;

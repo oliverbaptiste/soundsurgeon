@@ -198,6 +198,7 @@ There are many different directions this app could go:
 
 * [x] generate UI via JS
   * [ ] generate UI using a library/framework like Vue or React
+    * This article may help: [*Working with the Keyboard in your Vue App* by Raymond Camden](https://www.raymondcamden.com/2019/08/12/working-with-the-keyboard-in-your-vue-app)
 * [ ] add effects and polyphony
 * [ ] allow the saving and recall of patches
 * [ ] adding a chord arpeggiator or sequencer
@@ -205,4 +206,4 @@ There are many different directions this app could go:
 
 ---
 
-Last updated: 2022-12-08 04:04 UTC
+Last updated: 2023-01-07 23:18 UTC

@@ -8,18 +8,20 @@ My final project web app will be an electronic musical instrument using the **We
 
 * The application allows you to play play 8 notes (1 octave) using the QWERTY home row or on-screen buttons:
 
-| Do | Re | Mi | Fa | Sol | La | Ti | Do |
-| --- |
-| C | D | E | F | G | A | B | C |
-| a | s | d | f | j | k | l | ; |
+| Do  | Re  | Mi  | Fa  | Sol | La  | Ti  | Do  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| C   | D   | E   | F   | G   | A   | B   | C   |
+| a   | s   | d   | f   | j   | k   | l   | ;   |
 
 I'm thinking of using the G and H keys as an additional control, like volume or octave.
 
 ### Additional Feature Ideas
 
 #### Chromatic Keyboard
+
 Interface expands to enable playing 2 chromatic octaves:
-```
+
+```text
 | q  | w  | e  | r  |  | u  | i  | o  | p  |  
 | a  | s  | d  | f  |  | j  | k  | l  | ;  |    
 | z  | x  | c  | v  |  | m  | ,  | .  | /  |  
@@ -28,11 +30,12 @@ Interface expands to enable playing 2 chromatic octaves:
 | C♯ | D  | D♯ | E  |  | C♯ | D  | D♯ | E  |
 | A  | A♯ | B  | C  |  | A  | A♯ | B  | C  |
 ```
+
 The Number row could control volume:  
 
 | Volume Level: | 10% | 20% | 30% | 40% | 50% | 60% | 70% | 80% | 90% | 100% |
-|---|
-| **Key**: | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 |
+| ------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- |
+| **Key**:      | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 0    |
 
 #### Saving patches
 
@@ -55,6 +58,7 @@ I could also add a feature where you can play along to a pre-recorded drum track
 APIs and Libraries I will definitely use are in **bold**.
 
 Instead of public Web APIs I will utilize at least one of the following browser APIs:
+
 * **Web Audio API**
 * SVG
 * Canvas
@@ -63,7 +67,6 @@ Instead of public Web APIs I will utilize at least one of the following browser 
 * WebGL
 
 ## Libraries
-
 
 * **jQuery 3.1.1**
 * Underscore

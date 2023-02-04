@@ -1,0 +1,27 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,900i&display=swap');
+
+body {
+  background: #AB6534;
+  background-image: url('img/bg-woodgrain.min.png');
+  background-size: cover;
+  background-position: center center;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background: #000;
+  padding: 1em;
+}
+
+header h1 {
+  color: #fff;
+  font-size: inherit;
+  font-weight: 100;
+}
+
+header h1 strong {
+  color: rgb(163, 199, 210);
+  font-weight: 500;
+  text-transform: uppercase;
+}

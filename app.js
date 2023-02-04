@@ -1,5 +1,4 @@
-import 'normalize.css';
-import './style.scss';
+import './app.scss';
 
 import $ from 'jquery';
 import * as Tone from 'tone';
@@ -104,10 +103,8 @@ $(function(){
       $('.filter-envelope .release').val(synth.filterEnvelope.release);
     },
     view: () => {
-      const template = `
-        <header>
-          <h1><strong>Soundsurgeon</strong> JS-11-16 HTML5 Synthesizer</h1>
-        </header>
+      const html = String.raw;
+      const template = html`
         <div class="device">
           <div class="keyboard">
             <div class="left hand">

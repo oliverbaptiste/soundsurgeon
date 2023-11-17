@@ -1,19 +1,29 @@
-# Soundsurgeon JS-11-16 HTML5 Synthesizer
+# Soundsurgeon HTML5 Synthesizer - Model № JS-11-16
 
-My final project web app is a synthesizer using the [**Web Audio API**](https://webaudio.github.io/web-audio-api/) for sound generation.
+My final project web app is a synthesizer using the [**Web Audio
+API**](https://webaudio.github.io/web-audio-api/) for sound generation.
 
 Libraries Used:
 
 * [jQuery 3.6.1](https://jquery.com/) for UI event handling
-* [KeyboardJS](https://github.com/RobertWHurst/KeyboardJS) for advanced keyboard event handling
+* [KeyboardJS](https://github.com/RobertWHurst/KeyboardJS)
+for advanced keyboard event handling
 * [Tone.js](https://tonejs.github.io/) for sound generation
-* [Teoria.js](https://github.com/saebekassebil/teoria) for musical scale generation
+* [Teoria.js](https://github.com/saebekassebil/teoria)
+for musical scale generation
 
-The Soundsurgeon JS-11-16 HTML5 Synthesizer is a musical instrument that lets a user play an octave of notes using the QWERTY home row, or on-screen buttons.
+The Soundsurgeon JS-11-16 HTML5 Synthesizer is a musical instrument that lets
+a user play an octave of notes using the QWERTY home row, or on-screen buttons.
 
-The instrument utilizes the Web Audio API's ability to generate sound in the browser, forgoing the use of audio files or plug-ins. Web Audio API allows for subtractive synthesis sound design popularized by analog modular synthesizers like Moog and Buchla in the 1960s and 70s.
+The instrument utilizes the Web Audio API's ability to generate sound in the
+browser, forgoing the use of audio files or plug-ins. Web Audio API allows for
+subtractive synthesis sound design popularized by analog modular synthesizers
+like Moog and Buchla in the 1960s and 70s.
 
-In the Web Audio API, an `AudioContext` object is an audio processing interface that consists of audio modules connected to each other, like in a modular synthesizer. These modules — called *nodes* — are created with constructor methods, while other `AudioContext` methods connect and manipulate the nodes.
+In the Web Audio API, an `AudioContext` object is an audio processing interface
+that consists of audio modules connected to each other, like in a modular
+synthesizer. These modules — called *nodes* — are created with constructor
+methods, while other `AudioContext` methods connect and manipulate the nodes.
 
 ```javascript
 // create AudioContext
@@ -44,7 +54,11 @@ g.gain.value = 0;
 o.start(0);
 ```
 
-Tone.js is a framework that abstracts the Web Audio API `AudioContext` and nodes into the `Tone` object, which contain object types like `Instrument` and  `Effect` that are easier to work with in a musical context. For instance, you can choose notes using scientific pitch notation to choose frequencies, or define note duration like you would on a score:
+Tone.js is a framework that abstracts the Web Audio API `AudioContext` and
+nodes into the `Tone` object, which contain object types like `Instrument` and
+`Effect` that are easier to work with in a musical context. For instance, you
+can choose notes using scientific pitch notation to choose frequencies, or
+define note duration like you would on a score:
 
 ```javascript
 // Tone.js "Hello World"
@@ -57,43 +71,51 @@ synth.triggerAttackRelease("C4", "8n");
 
 ```
 
-In `App.init`, `App.synthObj` is assigned an instance of the `Tone.MonoSynth` instrument, a monophonic synthesizer composed of:
+In `App.init`, `App.synthObj` is assigned an instance of the `Tone.MonoSynth`
+instrument, a monophonic synthesizer composed of:
 
 * one oscillator
 * connected to an amplitude envelope
 * connected to a filter that is controlled by its own envelope
 * connected to the `Tone.Destination` output object.
 
-The [Tone.js API](https://tonejs.github.io/docs/) describes the various methods and parameters available to `Tone` components. The major `Tone.MonoSynth` sound parameters are:
+The [Tone.js API](https://tonejs.github.io/docs/) describes the various methods
+and parameters available to `Tone` components. The major `Tone.MonoSynth` sound
+parameters are:
 
-* Mute and Volume control
-* Waveform type
-  * Sine
-  * Square (default)
-  * Triangle
-  * Sawtooth
+* Oscillator
+  * Mute button
+  * Volume slider
+  * Waveforms:
+	* Sine
+    * Square (default)
+    * Triangle
+    * Sawtooth
+  * Detune
+  * Portamento
 * Amplitude Envelope
   * Attack
   * Decay
   * Sustain
   * Release
-* Portamento
-* Detune
-* Filter
-  * Q
-  * Filter Envelope
-    * Attack
-    * Decay
-    * Sustain
-    * Release
+* Filter Envelope
+  * Attack
+  * Decay
+  * Sustain
+  * Release
+  * “Q”
 
-The user interface used to live in `index.html`, but is now generated via a template string in `App.view`. HTML5 `<input>` elements are utilized to control these parameters:
+The user interface used to live in `index.html`, but is now generated via a
+template string in `App.view`. HTML5 `<input>` elements are utilized to control
+these parameters:
 
 * `checkbox` for the mute button
 * `radio` for waveform selection
 * `range` sliders for all other parameters
 
-The `App.initControls` method invoked in `App.init` accepts a Tone.js synth object as an argument, gets the synth's sound parameters, and adjusts the UI to represent those values using jQuery methods:
+The `App.initControls` method invoked in `App.init` accepts a Tone.js synth
+object as an argument, gets the synth's sound parameters, and adjusts the UI to
+represent those values using jQuery methods:
 
 ```javascript
 initControls: function(synth) {
@@ -113,7 +135,9 @@ initControls: function(synth) {
 }
 ```
 
-The `App.bindEvents` method invoked in `App.init` also accepts a Tone.js synth object as an argument, and contains the code that handles the event listeners when UI elements change:
+The `App.bindEvents` method invoked in `App.init` also accepts a Tone.js synth
+object as an argument, and contains the code that handles the event listeners
+when UI elements change:
 
 ```javascript
 $('.mute').change(function(e) {
@@ -153,7 +177,11 @@ $('.filter-envelope input').change(function(e) {
 });
 ```
 
-`App.bindEvents` also utilizes KeyboardJS, a key bindings library that most importantly allows the `.preventRepeat()` method to disable key repeat when keys are held down. The names of the home row keys are held in a variable in the `CONSTANTS` object, and Tone.js triggers are attached to both the key bindings and the `<label>` elements that hold the `<button>` UI elements.
+`App.bindEvents` also utilizes KeyboardJS, a key bindings library that most
+importantly allows the `.preventRepeat()` method to disable key repeat when
+keys are held down. The names of the home row keys are held in a variable in
+the `CONSTANTS` object, and Tone.js triggers are attached to both the key
+bindings and the `<label>` elements that hold the `<button>` UI elements.
 
 ```javascript
 CONSTANTS.HOME_ROW.forEach(function(elem, i) {
@@ -178,7 +206,14 @@ document.querySelectorAll('.keyboard label').forEach(function(elem, i) {
 });
 ```
 
-Teoria.js is a library that allows for programming in a Western music theory context. Earlier in development, the `CONSTANTS.DEFAULT_SCALE` array supplied the app with the notes needed by the `Tone` object to create a full scale. Teoria.js allows for scales, notes, and intervals to be represented by objects, and objects can be chained together like in jQuery. The `App.generateScale` method now returns an array that is used to create the notes, so that in the future, users could choose the tonic note, octave, and scale type they want the keyboard to control.
+Teoria.js is a library that allows for programming in a Western music theory
+context. Earlier in development, the `CONSTANTS.DEFAULT_SCALE` array supplied
+the app with the notes needed by the `Tone` object to create a full scale.
+Teoria.js allows for scales, notes, and intervals to be represented by objects,
+and objects can be chained together like in jQuery. The `App.generateScale`
+method now returns an array that is used to create the notes, so that in the
+future, users could choose the tonic note, octave, and scale type they want the
+keyboard to control.
 
 ```javascript
 generateScale: function(tonic, scaleType) {
@@ -197,8 +232,6 @@ generateScale: function(tonic, scaleType) {
 There are many different directions this app could go:
 
 * [x] generate UI via JS
-  * [ ] generate UI using a library/framework like Vue or React
-    * This article may help: [*Working with the Keyboard in your Vue App* by Raymond Camden](https://www.raymondcamden.com/2019/08/12/working-with-the-keyboard-in-your-vue-app)
 * [ ] add effects and polyphony
 * [ ] allow the saving and recall of patches
 * [ ] adding a chord arpeggiator or sequencer
@@ -206,4 +239,4 @@ There are many different directions this app could go:
 
 ---
 
-Last updated: 2023-01-07 23:18 UTC
+Last updated: 2023-11-17 17:55 UTC

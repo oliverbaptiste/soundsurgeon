@@ -18,7 +18,7 @@
     font: {
       size: 30px;
       style: italic;
-      weight: 900;
+      weight: 700;
     }
     text-align: center;
     width: 80px;
@@ -34,7 +34,7 @@
     color: #fff;
     font: {
       size: 30px;
-      weight: 100;
+      weight: 300;
     }
     line-height: 60px;
     margin: 0.25em;
@@ -56,13 +56,11 @@
   text-align: center;
   margin: 1em;
   h2 {
-    font-size: inherit;
-    font-style: italic;
-    font-weight: 900;
+    font-size: 120%;
     letter-spacing: 0.2em;
     line-height: 2;
     text-transform: uppercase;
-    margin: 0;
+    margin: 1em 0 0.5em;
   }
   div, section {
     padding-bottom: 1em;

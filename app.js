@@ -230,7 +230,7 @@ $(function(){
               </label>
             </div>
             <div class="envelope">
-              <h2>Envelope</h2>
+              <h2>Amplifier</h2>
               <label>
                 Attack
                 <input

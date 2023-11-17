@@ -1,12 +1,14 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700,700i&display=swap');
 
 body {
   background: #AB6534;
   background-image: url('img/bg-woodgrain.min.png');
   background-position: center center;
   background-size: cover;
+  color: #000;
   font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 header {
@@ -17,7 +19,7 @@ header {
 header h1 {
   color: #fff;
   font-size: 120%;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 header h1 strong {

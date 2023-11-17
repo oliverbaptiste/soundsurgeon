@@ -87,7 +87,7 @@ parameters are:
   * Mute button
   * Volume slider
   * Waveforms:
-	* Sine
+  * Sine
     * Square (default)
     * Triangle
     * Sawtooth

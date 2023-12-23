@@ -1,24 +1,33 @@
-# Soundsurgeon HTML5 Synthesizer - Model № JS-11-16
+# Soundsurgeon HTML5 Synthesizer
 
-My final project web app is a synthesizer using the [**Web Audio
-API**](https://webaudio.github.io/web-audio-api/) for sound generation.
+The **JS-11-16 monosynth**: an electronic musical instrument — created with
+the [**Web Audio API**](https://webaudio.github.io/web-audio-api/) — that
+lives at [soundsurgeon.com](https://soundsurgeon.com).
 
-Libraries Used:
+It began as the final project for the General Assembly _JavaScript Development_
+course I took in 2016–17.
 
-* [jQuery 3.6.1](https://jquery.com/) for UI event handling
+------
+
+JavaScript libraries used in this app:
+
+* [Tone.js](https://tonejs.github.io/) for sound synthesis
+* [Teoria.js](https://github.com/saebekassebil/teoria)
+to generate scales and modes
+* [jQuery](https://jquery.com/) for UI & event handling
 * [KeyboardJS](https://github.com/RobertWHurst/KeyboardJS)
 for advanced keyboard event handling
-* [Tone.js](https://tonejs.github.io/) for sound generation
-* [Teoria.js](https://github.com/saebekassebil/teoria)
-for musical scale generation
+* [Vite](https://vitejs.dev) build tool
 
-The Soundsurgeon JS-11-16 HTML5 Synthesizer is a musical instrument that lets
-a user play an octave of notes using the QWERTY home row, or on-screen buttons.
+------
 
-The instrument utilizes the Web Audio API's ability to generate sound in the
-browser, forgoing the use of audio files or plug-ins. Web Audio API allows for
-subtractive synthesis sound design popularized by analog modular synthesizers
-like Moog and Buchla in the 1960s and 70s.
+The **JS-11-16 monosynth** is a musical instrument that lets a user play an
+octave of notes using the home row of a QWERTY keyboard, or via on-screen buttons.
+
+This HTML5 app uses the **Web Audio API** to generate sound in the browser
+without using audio files. The Web Audio API allows for subtractive synthesis
+in the manner popularized by analog modular synthesizers of the 1960s & 70s:
+_Moog_, _Buchla_, et al.
 
 In the Web Audio API, an `AudioContext` object is an audio processing interface
 that consists of audio modules connected to each other, like in a modular
@@ -237,6 +246,6 @@ There are many different directions this app could go:
 * [ ] adding a chord arpeggiator or sequencer
 * [ ] add Web MIDI API support so the synth could be played with a MIDI keyboard
 
----
+------
 
-Last updated: 2023-11-17 17:55 UTC
+Last updated: 2023-12-23 07:25 UTC

@@ -176,7 +176,8 @@ $(function(){
                   name="volume"
                   min="-60"
                   max="0"
-                  step="-3">
+                  step="10"
+                  value="-6">
               </label>
             </div>
             <div class="waveforms">

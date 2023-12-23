@@ -255,7 +255,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   name="volume"
                   min="-60"
                   max="0"
-                  step="-3">
+                  step="10"
+                  value="-6">
               </label>
             </div>
             <div class="waveforms">

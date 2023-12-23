@@ -9,6 +9,8 @@
 .keyboard {
   margin: 1em;
   text-align: center;
+  -webkit-user-select: none;
+          user-select: none;
   .hand {
     display: inline-block;
   }
@@ -55,6 +57,8 @@
 .controls {
   text-align: center;
   margin: 1em;
+  -webkit-user-select: none;
+          user-select: none;
   h2 {
     font-size: 120%;
     letter-spacing: 0.2em;
